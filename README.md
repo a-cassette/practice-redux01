@@ -18,11 +18,14 @@ When click agein hide 'hello world'
 ### jsx
 React's JSX uses upper vs.lower case convention to distinguish between local component classes and html tags as follow:
 jsx renders both html tag and React compornents
-```var myDiv = <div className="foo" />;
+
+```
+var myDiv = <div className="foo" />;
 ReactDOM.render(myDiv, document.getElementById('example'));
 ```
 
-```var MyComponent = React.createClass({/*...*/});
+```
+var MyComponent = React.createClass({/*...*/});
 var myElement = <MyComponent someProperty={true} />;
 ReactDOM.render(myElement, document.getElementById('example'));
 ```
