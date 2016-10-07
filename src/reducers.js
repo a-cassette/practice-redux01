@@ -5,15 +5,21 @@
  * }
  */
 
+const defaultState = {
+    'isShown': false
+}
 
-const toggleMessage (state = [], action) => {
+
+export default (state = defaultState, action) => {
     switch(action.type) {
         case 'SHOW_MESSAGE':
-            return [
+            return {
                 isShown: true
-            ]
+            }
         case 'HIDE_MESSAGE':
+            return {
                 isShown: false
+            }
         default:
             return state;
     }
