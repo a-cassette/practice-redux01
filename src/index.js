@@ -3,14 +3,14 @@ import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 
-//import reducers from './'
-import App from './App'
+import showAndHide from './reducers'
+import App from './app'
 
 /*
  * instantiate store
  * createStore(container)
  */
-const store = createStore(App)
+const store = createStore(showAndHide)
 const targetDom = document.getElementById('react_app')
 
 /*

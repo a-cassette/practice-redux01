@@ -8,27 +8,26 @@
  */
 
 
-
 /*
  * action types
  */
-export const SHOW_MESSAGE = 'SHOW_MESSAGE'
-export const HIDE_MESSAGE = 'HIDE_MESSAGE'
-
-
+export const SHOW_POST = 'SHOW_POST'
+export const HIDE_POST = 'HIDE_POST'
 
 /*
  * action creators
  */
-export const showMessage = () => {
-    return {
-        type: 'SHOW_MESSAGE',
-        text: 'Hello World'
-    }
+export const showPost = () => {
+  console.log('showPost called')
+  return {
+    type: SHOW_POST,
+    text: 'Hola el mundo'
+  }
 }
 
-export const hideMessage = () => {
-    return {
-        type: 'HIDE_MESSAGE'
-    }
+export const hidePost = () => {
+  console.log('hidePost called')
+  return {
+    type: HIDE_POST,
+  }
 }

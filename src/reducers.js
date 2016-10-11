@@ -1,26 +1,40 @@
 /*
- * state
+ * The reducer is a pure function that takes the previous state and an action, and returns the next state.
+ * (previousState, action) => newState
+ *
+ */
+
+/*
+ * state shapes
  * {
  *   isShown: bool
  * }
  */
 
-const defaultState = {
-    'isShown': false
+import { SHOW_POST, HIDE_POST } from './actions'
+
+
+const initialState = {
+  isShown: false,
+  text: null
 }
 
 
-export default (state = defaultState, action) => {
-    switch(action.type) {
-        case 'SHOW_MESSAGE':
-            return {
-                isShown: true
-            }
-        case 'HIDE_MESSAGE':
-            return {
-                isShown: false
-            }
-        default:
-            return state;
-    }
+const showAndHide = (state = initialState, action) => {
+  switch(action.type) {
+    case SHOW_POST:
+      return Object.assign({}, state, {
+        isShown: true,
+        text: action.text
+      })
+    case HIDE_POST:
+      return Object.assign({}, state, {
+        isShown: false,
+        text: null
+      })
+    default:
+      return state;
+  }
 }
+
+export default showAndHide
