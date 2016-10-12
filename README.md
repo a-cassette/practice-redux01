@@ -11,12 +11,19 @@ When click agein hide 'hello world'
 
 ## **state**
 ---
+{
+  isShown: bool
+  text:string
+}
+
 
 ## **reducer**
 ---
+toggle state.isShown, and set texts
 
 ## **store**
 ---
+
 
 ## **connect with React (components, container)**
 ---
