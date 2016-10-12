@@ -11,7 +11,7 @@
  * }
  */
 
-import { SHOW_POST, HIDE_POST } from './actions'
+import { SHOW_POST, HIDE_POST } from '../actions/actions'
 
 
 const initialState = {

@@ -5,7 +5,6 @@
 import React         from 'react'
 import { Component } from 'react'
 import { PropTypes } from 'react'
-import { connect }   from 'react-redux'
 
 class Message extends Component {
   // props validator
@@ -29,14 +28,4 @@ class Message extends Component {
   }
 }
 
-//export default Message
-
-//map state values into props
-const mapStateToProps = (state) => {
-  return state
-}
-
-// instatiate component with maped properties
-export default connect(
-    mapStateToProps,
-)(Message)
+export default Message

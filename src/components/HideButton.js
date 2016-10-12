@@ -5,8 +5,6 @@
 import React         from 'react'
 import { Component } from 'react'
 import { PropTypes } from 'react'
-import { connect }   from 'react-redux'
-import { hidePost }  from './actions'
 
 class HideButton extends Component {
   // props validator
@@ -30,20 +28,4 @@ class HideButton extends Component {
   }
 }
 
-//map state values into props
-const mapStateToProps = (state) => {
-  return state
-}
-
-//map dispatch result into props
-const mapDispatchToProps = (dispatch) => {
-  return {
-    onHideButtonClick: () => { dispatch(hidePost()) },
-  }
-}
-
-// instatiate component with maped properties
-export default  connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(HideButton)
+export default HideButton
